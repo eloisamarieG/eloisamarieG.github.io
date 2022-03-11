@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background-color: cornsilk;
+    font-size: 150%;
+}
+header {
+    padding: 10px;
+    text-align: center;
+    background-color: aliceblue;
+}
+nav {
+    background-color: lavender;
+    padding: 5px;
+    text-align: center;
+    font-variant-caps: small-caps;
+}
+h1 {
+    color: crimson;
+}
+h2{
+    color: maroon;
+}
+.food {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+.aboutme {
+    background-color: lightgray;
+    padding: 10px;
+}
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: aliceblue;
+    margin-top: 5px;
+}

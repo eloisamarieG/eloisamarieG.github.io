@@ -1,5 +1,14 @@
+:root {
+    --bgColor: #cccccc;
+    --textColor: black;
+    --boxColor: darkblue;
+    --footColor: black;
+}
+*{
+    text-decoration-color: var (--textColor);
+}
 body{
-    background-color: floralwhite;
+    background: var(--bgColor);
     font-family: Arial;
 }
 .topnav {
@@ -34,7 +43,7 @@ body{
   padding-left: 5px;
 }
 .box {
-  background-color: white;
+  background: var (--boxColor);
   padding: 20px;
   margin-top: 20px;
 }
@@ -48,7 +57,7 @@ body{
 .footer {
   padding: 20px;
   text-align: center;
-  background-color: darkgray;
+  background-color: var (--footColor);
   margin-top: 20px;
 }
 @media screen and (max-width: 800px) {
@@ -56,4 +65,12 @@ body{
     width: 100%;
     padding: 0;
   }
+}
+
+.darkmode {
+    --bgColor: black;
+    --textColor: white;
+    --boxColor: #999999;
+    --footColor: #999999;
+
 }

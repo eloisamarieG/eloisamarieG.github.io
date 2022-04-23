@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Page</title>
+     <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="sis.css">
+
+    <script>
+        function wAlert(){
+            alert("Response sent! Thank you for your Feedback!");
+        }
+
+        function show1() {
+          document.getElementById("gd").style.visibility = "visible";
+          document.getElementById("rc").style.visibility = "hidden";
+          document.getElementById("fb").style.visibility = "hidden";
+        }
+
+        function show2() {
+          document.getElementById("gd").style.visibility = "hidden";
+          document.getElementById("rc").style.visibility = "visible";
+          document.getElementById("fb").style.visibility = "hidden";
+        }
+
+    </script>
+</head>
+
+<body class="studentPage">
+        <div class="student" >
+            <ul class="ulpage">
+                <li class="side1"><img class="pic" src="favicon.png"/></li>
+            </ul>
+            <div class="menu">
+                <ul class="menu">
+                    <li class="menu"><a class="active" href="#" onclick="show1()"><p class="big" ><i class="glyphicon glyphicon-pencil"> Course Grade </i></p></a></li>
+                    <li class="menu"><a class="active" href="#" onclick="show2()"><p class="big" ><i class="glyphicon glyphicon-list-alt"> Statement of Acccount </i></p></a></li>
+                    <li class="menu"><a class="active" href="feedback.html"><p class="big" ><i class="glyphicon glyphicon-pencil"> Feedback </i></p></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+        <div class="grade" id="gd">
+            <p class="titles"><i class="glyphicon glyphicon-pencil"></i>&nbsp&nbsp Course Grades</p>
+            <br><br><br>
+            <div style="margin-left: 10px;">
+                <ul class="gradesec" >
+                    <li style="float:left;"><div style="background-color:#03254c; color:white; width: 360px;border-radius:10px;">
+                    &nbsp;&nbsp;CPE107
+                    <p style="font-size:20px;">
+                            &nbsp;&nbsp;<b>SOFTWARE DESIGN</b></p><br><br>
+                    </div></li>
+                    <br><br><br>
+
+                    <li class="g1">
+                        <br><br>
+                        <i class="glyphicon glyphicon-list-alt" style="font-size:20px;"> Online Task 1</i><br><br><br><br>
+                        <i class="glyphicon glyphicon-list-alt" style="font-size:20px;"> Online Task 2</i><br><br><br><br>
+                        <i class="glyphicon glyphicon-list-alt" style="font-size:20px;"> Online Task 3</i><br><br><br><br><br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+
+        <section>
+        <div class="record" id="rc">
+            <p class="titles"><i class="glyphicon glyphicon-list-alt"></i>&nbsp&nbsp Statement of Account</p>
+            <br><br>
+            
+            <table>
+                <tr>
+                    <td>
+                        <iframe src="soapdf.png" width="700px" height="550px">
+                        </iframe>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </section>
+</body>
+
+<footer>
+    <div class="footer">
+    Malayan Colleges Mindanao.
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="sis.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script>
+        function addRow () {
+            document.querySelector('#content1').insertAdjacentHTML(
+                'afterbegin',
+                `<div class="row">
+                    <img class="anonpic" src ="assets/anon.png" style="width:120px; float:right;margin-right:50px;"/>
+                    <div style="padding:10px; margin-left:50px;">
+                    <p style="font-size:17px;"><b>
+                    Firstname:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Middlename:     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Lastname:       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    suffix:
+                    </b>
+                    </p>
+                    <input type="text" name="Fname" value="" placeholder="Firstname" required/>
+                    <input style="width:80px;margin-left:30px;" type="text" name="Mname" value="" placeholder="Mi" required/>
+                    <input style="margin-left:30px;" type="text" name="Lname" value="" placeholder="Lastname" required/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input list="suffix" name="suffix" placeholder="Suffix" style="width:70px;">
+                    <datalist id="suffix">
+                        <option value="Jr">
+                        <option value="Sr">
+                        <option value="II">
+                        <option value="III">
+                        <option value="IV">
+                        </datalist>
+                    </input>
+                        <br><br>
+                    <p style="font-size:17px;"><b>
+                    Student ID #:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Program:     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 &nbsp;&nbsp;
+                    Term:       &nbsp;&nbsp;&nbsp;
+                    Year:
+                    </b>
+                    </p>
+                    <input type="text" name="name" value="" placeholder="Student ID no."/> &nbsp&nbsp&nbsp&nbsp
+                    <input list="program" name="program" placeholder="Program" style="width:150px;">
+                        <datalist id="program">
+                        <option value="ECE">
+                        <option value="COMSCI">
+                        <option value="CPE">
+                        </datalist>
+                    </input>
+                    <input list="trm" name="date" placeholder="Term" style="width:60px;">
+                        <datalist id="trm">
+                        <option value="1st">
+                        <option value="2nd">
+                        <option value="3rd">
+                        </datalist>
+                    </input>
+                    <input list="year" name="year" placeholder="Year" style="width:100px;">
+                        <datalist id="year">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        </datalist>
+                    </input>
+                    </div>
+                        <br>
+                    <input class="btn" type="button" value="Remove Student" onclick="removeRow(this)" style="float:left;">
+                    <input class="btn" type="button" value="Choose File" onclick="#" style="float:right;margin-right:60px;">
+                        <br>
+                </div>`
+            )
+        }
+
+        function removeRow (input) {
+            input.parentNode.remove()
+        }
+
+        function addSubject () {
+            document.querySelector('#content2').insertAdjacentHTML(
+                'afterbegin',
+                `<div class="subject">
+                    <br>
+                    <p style="margin-left:50px; font-size:20px"><b>Course ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Course Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Course Term: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Instructor:</b></p>
+                    <div>
+                        <input type="text" name="Cnum" value="" placeholder="Course ID" style="margin-left:50px;" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="Cname" value="" placeholder="Course name" required/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input list="tm" name="tm" placeholder="Term" >
+                            <datalist id="tm">
+                                <option value="1st">
+                                <option value="2nd">
+                                <option value="3rd">
+                            </datalist>
+                        </input>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input list="instructor" name="instructor" placeholder="Instructor" >
+                            <datalist id="instructor">
+                                <option value="Jane Doe">
+                                <option value="John Travis">
+                                <option value="Francis Smith">
+                                <option value="Mary Lamb">
+                                <option value="Danie Brian">
+                            </datalist>
+                        </input>
+                    </div>
+                    <input class="btn" type="button" value="Remove Course" onclick="removeSubject(this)" style="float:right;">
+                    <br><br>
+                </div>`
+            )
+        }
+
+        function removeSubject (input) {
+            input.parentNode.remove()
+        }
+
+        function wAlert() {
+            alert("Message Sent!");
+        }
+
+        function show1() {
+          document.getElementById("st").style.visibility = "visible";
+          document.getElementById("cr").style.visibility = "hidden";
+          document.getElementById("an").style.visibility = "hidden";
+        }
+
+        function show2() {
+          document.getElementById("st").style.visibility = "hidden";
+          document.getElementById("cr").style.visibility = "visible";
+          document.getElementById("an").style.visibility = "hidden";
+        }
+
+        function show3() {
+          document.getElementById("st").style.visibility = "hidden";
+          document.getElementById("cr").style.visibility = "hidden";
+          document.getElementById("an").style.visibility = "visible";
+        }
+
+    </script>
+
+</head>
+
+<body class="adminPage">
+        <div class="admin">
+            <ul class="ulpage">
+                <li class="side1"><img class="pic" src="favicon.png"/></li>
+            </ul>
+            <div class="menu">
+                <ul class="menu">
+                    <li class="menu"><a class="active" href="#" onclick="show1()"><p class="big" > Students</p></a></li>
+                    <li class="menu"><a class="active" href="#" onclick="show2()"><p class="big" > Courses</p></a></li>
+                    <li class="menu"><a class="active" href="#" onclick="show3()"><p class="big" > Announcement</p></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+        <div class="stud" id="st">
+            <p class="titles">Student Information</p>
+            <br><br>
+            <div style="margin:5px;">
+                <input class="btn" type="button" value="Add student" onclick="addRow()"><br>
+                <p style="text-align:center;font-size:15px;"><b>Edit Information</b></p>
+                <div id="content1" style="background-color: #362769;border:1px solid grey; border-radius:10px; width:1150px; margin-left:40px; height:480px;">
+
+                </div>
+            </div>
+
+        </div>
+        </section>
+
+        <section>
+        <div class="course1" id="cr">
+            <p class="titles"> Course Information</p>
+            <br><br>
+            <div style="margin:10px;">
+                <input class="btn" type="button" value="Add Courses" onclick="addSubject()"><br><br>
+                <p style="text-align:center;font-size:15px;"><b>Edit Courses</b></p>
+                <div id="content2" style="background-color: #362769; border:1px solid grey; border-radius:10px; width:1150px; margin-left:40px; height:430px;">
+
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section>
+        <div class="announce" id="an">
+            <p class="titles"> ANNOUNCEMENTS</p>
+
+            <div class="feed">
+            <div class="form">
+            </div>
+
+            <div class="comment">
+            <form action="#" method="post">
+                <div>
+                    <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;width:790px;height:250px;">
+                    </textarea>
+                </div>
+                <input class="btn" type="submit" value="Submit" style="margin-left:30%;">
+            </form>
+            </div>
+            </div>
+        </div>
+        </section>
+</body>
+
+<footer>
+    <div class="footer">Malayan Colleges Mindanao.
+    </div>
+</footer>
+
+</html>

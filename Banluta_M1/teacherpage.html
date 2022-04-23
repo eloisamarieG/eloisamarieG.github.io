@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Page</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <script language="javascript">
+
+        localStorage.i = Number(1);
+
+        function myevent(action)
+        {
+            var i = Number(localStorage.i);
+            var div = document.createElement('div');
+
+            if(action.id == "add")
+            {
+                localStorage.i = Number(localStorage.i) + Number(1);
+                var id = i;
+                div.id = id;
+                div.innerHTML = 'Student'+id+': <input type="text" name="tbox_'+id+'"/>' + ' <input type="button" id='+id+' onclick="myevent(this)" value="Delete" />';
+
+                document.getElementById('AddDel').appendChild(div);
+            }
+            else
+            {
+                var element = document.getElementById(action.id);
+                element.parentNode.removeChild(element);
+            }
+        }
+        function myevent1(action)
+        {
+            var i = Number(localStorage.i);
+            var div = document.createElement('div');
+
+            if(action.id == "addd")
+            {
+                localStorage.i = Number(localStorage.i) + Number(1);
+                var id = i;
+                div.id = id;
+                div.innerHTML = 'Student'+id+': <input type="text" name="tbox_'+id+'"/>' + ' <input type="button" id='+id+' onclick="myevent1(this)" value="Delete" />';
+
+                document.getElementById('AddDel1').appendChild(div);
+            }
+            else
+            {
+                var element = document.getElementById(action.id);
+                element.parentNode.removeChild(element);
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+    <legend>Enroll Students</legend>
+    <form>
+        <div id="AddDel">
+            Enter Student Name:
+            <input type="text" name="default_tb">
+            <input type="button" id="add" onclick="myevent(this)" value="Enroll" />
+        </div>
+            <input type="button" type="submit" value="Submit Data" />
+    </form>
+    </fieldset>
+    <fieldset>
+    <legend>Add/Delete Grades</legend>
+    <form>
+        <div id="AddDel1">
+            Enter Student Number + Grade:
+            <input type="text" name="default_tb">
+            <input type="button" id="addd" onclick="myevent1(this)" value="Add" />
+        </div>
+            <input type="button" type="submit" value="Submit Data" />
+    </form>
+    </fieldset>
+</body>
+</html>
